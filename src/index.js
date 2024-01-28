@@ -28,10 +28,10 @@ function repl() {
 }
 
 let args;
-if (process.stdout[0].indexOf('node') !== -1) {
-  args = process.stdout.slice(2)
+if (process.argv[0].indexOf('node') !== -1) {
+  args = process.argv.slice(2)
 } else {
-  args = process.stdout.slice(1);
+  args = process.argv.slice(1);
 }
 if (args.length <= 0) {
   console.log('Lua Interpreter REPL');
